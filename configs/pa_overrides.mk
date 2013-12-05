@@ -13,7 +13,8 @@
 # limitations under the License.
 
 PRODUCT_PACKAGES += \
-        Busybox
+    Busybox \
+    Lightbulb
 
 # Source or prebuilt PA-prefs logic
 #ifneq ($(PREFS_FROM_SOURCE),true)
@@ -39,8 +40,3 @@ else
     PRODUCT_COPY_FILES += \
         vendor/pa/prebuilt/bootanimation/XHDPI.zip:system/media/bootanimation.zip
 endif
-
-# ro.pa used by ParanoidOTA
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.pa=true
-
