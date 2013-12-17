@@ -14,7 +14,7 @@
 
 # Check for target product
 
-ifeq (pa_jfltetmo,$(TARGET_PRODUCT))
+ifeq (pa_jfltecan,$(TARGET_PRODUCT))
 
 # Define PA bootanimation size
 PARANOID_BOOTANIMATION_NAME := XHDPI
