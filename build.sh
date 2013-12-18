@@ -100,6 +100,7 @@ else
 fi
 
 # Decide what command to execute
+fix_count=0
 for var in $* ; do
 if [ "$var" == "sync" ]
 then
@@ -125,8 +126,8 @@ done
 
 if [ "$fix_count" == "0" ]
 then
-   echo -e "removing build.prop"
-   rm -f $DIR/out/target/product/$DEVICE/system/build.prop
+   echo -e "removing build.prop..."
+   rm $OUT/system/build.prop
 fi
 
 echo -e ""
