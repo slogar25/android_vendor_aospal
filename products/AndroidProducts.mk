@@ -42,6 +42,3 @@ endif
 ifeq (pa_toroplus,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_toroplus.mk
 endif
-ifeq (pa_d802,$(TARGET_PRODUCT))
-    PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_d802.mk
-endif
