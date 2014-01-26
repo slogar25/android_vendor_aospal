@@ -55,8 +55,13 @@ DEVICE="$1"
 MAJOR=$(cat $DIR/vendor/pa/vendor.mk | grep 'ROM_VERSION_MAJOR := *' | sed  's/ROM_VERSION_MAJOR := //g')
 MINOR=$(cat $DIR/vendor/pa/vendor.mk | grep 'ROM_VERSION_MINOR := *' | sed  's/ROM_VERSION_MINOR := //g')
 MAINTENANCE=$(cat $DIR/vendor/pa/vendor.mk | grep 'ROM_VERSION_MAINTENANCE := *' | sed  's/ROM_VERSION_MAINTENANCE := //g')
+TAG=$(cat $DIR/vendor/pa/vendor.mk | grep 'ROM_VERSION_TAG := *' | sed  's/ROM_VERSION_TAG := //g')
 
-VERSION=$MAJOR.$MINOR$MAINTENANCE
+if [ -n "$TAG" ]; then
+        VERSION=$MAJOR.$MINOR$MAINTENANCE-$TAG
+else
+        VERSION=$MAJOR.$MINOR$MAINTENANCE
+fi
 
 
 # Get start time
@@ -64,6 +69,32 @@ res1=$(date +%s.%N)
 
 echo -e "${cya}Building ${bldcya}AOSPA $VERSION for $DEVICE ${txtrst}";
 echo -e "${bldgrn}Start time: $(date) ${txtrst}"
+
+# Decide what command to execute
+case "$EXTRAS" in
+        threads)
+                echo -e "${bldblu}Please enter desired building/syncing threads number followed by [ENTER]${txtrst}"
+                read threads
+                THREADS=$threads
+        ;;
+        clean|cclean)
+                echo -e "${bldblu}Cleaning intermediates and output files${txtrst}"
+                export CLEAN_BUILD="true"
+                [ -d "${DIR}/out" ] && rm -Rf ${DIR}/out/*
+        ;;
+esac
+
+echo -e ""
+
+export DEVICE=$DEVICE
+
+# Fetch latest sources
+if [ "$SYNC" == "true" ]; then
+        echo -e ""
+        echo -e "${bldblu}Fetching latest sources${txtrst}"
+        repo sync -j"$THREADS"
+        echo -e ""
+fi
 
 if [ ! -r "${DIR}/out/versions_checked.mk" ] && [ -n "$(java -version 2>&1 | grep -i openjdk)" ]; then
         echo -e "${bldcya}Your java version still not checked and is candidate to fail, masquerading.${txtrst}"
