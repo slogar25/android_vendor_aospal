@@ -12,6 +12,7 @@ add_lunch_combo pa_grouper-userdebug
 add_lunch_combo pa_hercules-userdebug
 add_lunch_combo pa_i605-userdebug
 add_lunch_combo pa_i9300-userdebug
+add_lunch_combo pa_i9500-userdebug
 add_lunch_combo pa_jflteatt-userdebug
 add_lunch_combo pa_jfltecan-userdebug
 add_lunch_combo pa_jfltecri-userdebug
