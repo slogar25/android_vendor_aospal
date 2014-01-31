@@ -13,8 +13,7 @@
 # limitations under the License.
 
 # Check for target product
-
-ifeq (pa_xt926,$(TARGET_PRODUCT))
+ifeq (pa_vanquish,$(TARGET_PRODUCT))
 
 # OVERLAY_TARGET adds overlay asset source
 OVERLAY_TARGET := pa_xhdpi
@@ -29,14 +28,13 @@ $(call inherit-product, vendor/pa/configs/telephony.mk)
 include vendor/pa/main.mk
 
 # Inherit AOSP device configuration
-$(call inherit-product, device/motorola/xt926/full_xt926.mk)
+$(call inherit-product, device/motorola/vanquish/full_vanquish.mk)
 
 # Override AOSP build properties
-PRODUCT_DEVICE := xt926
-PRODUCT_NAME := pa_xt926
+PRODUCT_DEVICE := vanquish
+PRODUCT_NAME := full_vanquish
 PRODUCT_BRAND := motorola
-PRODUCT_MODEL := XT926
+PRODUCT_MODEL := RAZR HD
 PRODUCT_MANUFACTURER := motorola
-PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=XT926_verizon TARGET_DEVICE=XT926 BUILD_FINGERPRINT="motorola/XT926_verizon/vanquish:4.1.2/9.8.1Q-62_VQW_MR-2/6:user/release-keys"
 
 endif

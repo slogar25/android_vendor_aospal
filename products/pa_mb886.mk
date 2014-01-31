@@ -1,4 +1,4 @@
-﻿# Copyright (C) 2013 ParanoidAndroid Project
+# Copyright (C) 2013 ParanoidAndroid Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -13,7 +13,6 @@
 # limitations under the License.
 
 # Check for target product
-
 ifeq (pa_mb886,$(TARGET_PRODUCT))
 
 # OVERLAY_TARGET adds overlay asset source

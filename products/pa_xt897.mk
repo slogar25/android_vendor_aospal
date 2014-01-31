@@ -13,7 +13,6 @@
 # limitations under the License.
 
 # Check for target product
-
 ifeq (pa_xt897,$(TARGET_PRODUCT))
 
 # OVERLAY_TARGET adds overlay asset source

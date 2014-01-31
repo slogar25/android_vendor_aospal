@@ -127,8 +127,5 @@ ifeq (pa_xt907,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_xt907.mk
 endif
 ifeq (pa_xt925,$(TARGET_PRODUCT))
-    PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_xt925.mk
-endif
-ifeq (pa_xt926,$(TARGET_PRODUCT))
-    PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_xt926.mk
+    PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_vanquish.mk
 endif
