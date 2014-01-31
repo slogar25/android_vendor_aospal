@@ -13,10 +13,8 @@
 # limitations under the License.
 
 # Check for target product
-ifeq (pa_xt907,$(TARGET_PRODUCT))
 
-# Define PA bootanimation size
-PARANOID_BOOTANIMATION_NAME := HDPI
+ifeq (pa_xt907,$(TARGET_PRODUCT))
 
 # OVERLAY_TARGET adds overlay asset source
 OVERLAY_TARGET := pa_hdpi
