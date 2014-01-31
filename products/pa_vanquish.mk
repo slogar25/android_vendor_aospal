@@ -32,7 +32,7 @@ $(call inherit-product, device/motorola/vanquish/full_vanquish.mk)
 
 # Override AOSP build properties
 PRODUCT_DEVICE := vanquish
-PRODUCT_NAME := full_vanquish
+PRODUCT_NAME := pa_vanquish
 PRODUCT_BRAND := motorola
 PRODUCT_MODEL := RAZR HD
 PRODUCT_MANUFACTURER := motorola
