@@ -39,9 +39,6 @@ endif
 ifeq (pa_geeb,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_geeb.mk
 endif
-ifeq (pa_grouper,$(TARGET_PRODUCT))
-    PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_grouper.mk
-endif
 ifeq (pa_jflte,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_jflteatt.mk
 endif
@@ -74,9 +71,6 @@ ifeq (pa_ls980,$(TARGET_PRODUCT))
 endif
 ifeq (pa_m7,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_m7.mk
-endif
-ifeq (pa_maguro,$(TARGET_PRODUCT))
-    PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_maguro.mk
 endif
 ifeq (pa_n7000,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_n7000.mk
