@@ -12,17 +12,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-ifeq (pa_d2att,$(TARGET_PRODUCT))
+ifeq (pa_d2lte,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_d2att.mk
-endif
-ifeq (pa_d2spr,$(TARGET_PRODUCT))
-    PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_d2spr.mk
-endif
-ifeq (pa_d2tmo,$(TARGET_PRODUCT))
-    PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_d2tmo.mk
-endif
-ifeq (pa_d2vzw,$(TARGET_PRODUCT))
-    PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_d2vzw.mk
 endif
 ifeq (pa_d800,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_d800.mk
@@ -42,8 +33,17 @@ endif
 ifeq (pa_galaxysmtd,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_galaxysmtd.mk
 endif
+ifeq (pa_gee,$(TARGET_PRODUCT))
+    PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_gee.mk
+endif
+ifeq (pa_geeb,$(TARGET_PRODUCT))
+    PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_geeb.mk
+endif
 ifeq (pa_grouper,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_grouper.mk
+endif
+ifeq (pa_jflte,$(TARGET_PRODUCT))
+    PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_jflteatt.mk
 endif
 ifeq (pa_jflteatt,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_jflteatt.mk
@@ -65,27 +65,6 @@ ifeq (pa_i9300,$(TARGET_PRODUCT))
 endif
 ifeq (pa_i9500,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_i9500.mk
-endif
-ifeq (pa_jflteatt,$(TARGET_PRODUCT))
-    PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_jflteatt.mk
-endif
-ifeq (pa_jfltecan,$(TARGET_PRODUCT))
-    PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_jfltecan.mk
-endif
-ifeq (pa_jfltecri,$(TARGET_PRODUCT))
-    PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_jfltecri.mk
-endif
-ifeq (pa_jfltecsp,$(TARGET_PRODUCT))
-    PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_jfltecsp.mk
-endif
-ifeq (pa_jfltespr,$(TARGET_PRODUCT))
-    PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_jfltespr.mk
-endif
-ifeq (pa_jfltetmo,$(TARGET_PRODUCT))
-    PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_jfltetmo.mk
-endif
-ifeq (pa_jflteusc,$(TARGET_PRODUCT))
-    PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_jflteusc.mk
 endif
 ifeq (pa_l900,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_l900.mk
@@ -117,6 +96,7 @@ endif
 ifeq (pa_vs980,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_vs980.mk
 endif
+<<<<<<< HEAD
 ifeq (pa_mb886,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_mb886.mk
 endif
@@ -131,4 +111,8 @@ ifeq (pa_xt907,$(TARGET_PRODUCT))
 endif
 ifeq (pa_vanquish,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_vanquish.mk
+=======
+ifeq (pa_yuga,$(TARGET_PRODUCT))
+    PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_yuga.mk
+>>>>>>> PA/kitkat
 endif
