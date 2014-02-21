@@ -13,7 +13,7 @@
 # limitations under the License.
 
 ifeq (pa_d2lte,$(TARGET_PRODUCT))
-    PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_d2att.mk
+    PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_d2lte.mk
 endif
 ifeq (pa_d800,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_d800.mk
@@ -42,14 +42,8 @@ endif
 ifeq (pa_jflte,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_jflteatt.mk
 endif
-ifeq (pa_jflteatt,$(TARGET_PRODUCT))
-    PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_jflteatt.mk
-endif
-ifeq (pa_jfltecan,$(TARGET_PRODUCT))
-    PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_jfltecan.mk
-endif
-ifeq (pa_jfltetmo,$(TARGET_PRODUCT))
-    PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_jfltetmo.mk
+ifeq (pa_jflte,$(TARGET_PRODUCT))
+    PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_jflte.mk
 endif
 ifeq (pa_hercules,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_hercules.mk
@@ -90,7 +84,6 @@ endif
 ifeq (pa_vs980,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_vs980.mk
 endif
-<<<<<<< HEAD
 ifeq (pa_mb886,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_mb886.mk
 endif
@@ -105,8 +98,7 @@ ifeq (pa_xt907,$(TARGET_PRODUCT))
 endif
 ifeq (pa_vanquish,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_vanquish.mk
-=======
+endif
 ifeq (pa_yuga,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_yuga.mk
->>>>>>> PA/kitkat
 endif
