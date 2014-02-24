@@ -14,7 +14,7 @@
 
 # Check for target product
 
-ifeq (pa_jflte,$(TARGET_PRODUCT))
+ifeq (pa_moto_msm8960dt,$(TARGET_PRODUCT))
 
 # OVERLAY_TARGET adds overlay asset source
 OVERLAY_TARGET := pa_xhdpi
@@ -29,21 +29,18 @@ $(call inherit-product, vendor/pa/configs/telephony.mk)
 include vendor/pa/main.mk
 
 # Inherit device configuration
-$(call inherit-product, device/samsung/jflte/full_jflte.mk)
+$(call inherit-product, device/motorola/moto_msm8960dt/full_moto_msm8960dt.mk)
 
 # Override AOSP build properties
-PRODUCT_NAME := pa_jflte
-PRODUCT_DEVICE := jflte
-PRODUCT_BRAND := samsung
-PRODUCT_MANUFACTURER := samsung
-PRODUCT_MODEL := jflte
-<<<<<<< HEAD:products/pa_jflte.mk
-=======
+PRODUCT_DEVICE := moto_msm8960dt
+PRODUCT_NAME := pa_moto_msm8960dt
+PRODUCT_BRAND := motorola
+PRODUCT_MODEL := MOTOROLA MSM8960DT
+PRODUCT_MANUFACTURER := motorola
 
 # Set build fingerprint / ID / Product Name ect.
-PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=jflte TARGET_DEVICE=jflte
->>>>>>> PA/kitkat:products/pa_jflte.mk
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    PRODUCT_NAME=motorola \
+    TARGET_DEVICE=moto_msm8960dt
 
-# Set build fingerprint / ID / Product Name ect.
-PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=jflte TARGET_DEVICE=jflte
 endif

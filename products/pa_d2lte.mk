@@ -37,6 +37,12 @@ PRODUCT_DEVICE := d2lte
 PRODUCT_BRAND := samsung
 PRODUCT_MANUFACTURER := samsung
 PRODUCT_MODEL := d2lte
+<<<<<<< HEAD:products/pa_d2lte.mk
+=======
+
+# Set build fingerprint / ID / Product Name ect.
+PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=d2lte TARGET_DEVICE=d2lte
+>>>>>>> PA/kitkat:products/pa_d2lte.mk
 
 # Set build fingerprint / ID / Product Name ect.
 PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=d2lte TARGET_DEVICE=d2lte
